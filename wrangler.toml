@@ -3,7 +3,7 @@ main = "src/ads.js"
 compatibility_date = "2024-09-23"
 
 [vars]
-LICENSE_DOMAIN = "daffadev.github.io"
+LICENSE_DOMAIN = "daffadevhosting.github.io"
 ADS_IMAGE = "https://placehold.co/220x320/111111/ffffff/png?text=My+Blog"
 ADS_LINK = "https://daffadevhosting.github.io/blog/"
 ADS_LIST = "[{\"image\":\"https://placehold.co/220x320/ffffff/111111/png?text=My+Blog\",\"link\":\"https://daffadevhosting.github.io/chat/\",\"title\":\"Promo Spesial!\"},{\"image\":\"https://placehold.co/220x320/222222/ffffff/png?text=Ustad+AI\",\"link\":\"https://daffadevhosting.github.io/ustad-ai/\",\"title\":\"Diskon Hari Ini\"},{\"image\":\"https://placeholder.co/220x320/333333/ffffff?text=My+Store\",\"link\":\"https://daffadevhosting.githu.io/store/\",\"title\":\"Cek Sekarang\"}]"

@@ -13,8 +13,8 @@ const ALLOWED_ORIGINS = [
 ];
 
 function getConfig(env) {
-  const domain = (env.LICENSE_DOMAIN || "daffadevhosting").replace(/^https?:\/\//, "").replace(/\/$/, "");
-  const url = `https://${domain}github.io`;
+  const domain = (env.LICENSE_DOMAIN || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const url = `https://${domain}`;
 
   // Multi-iklan: ADS_LIST = JSON array [{image,link,title?}, ...]
   // Fallback: ADS_IMAGE + ADS_LINK (single)

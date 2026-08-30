@@ -8,8 +8,8 @@ const ALLOWED_ORIGINS = [
   "https://www.blogger.com",
   "https://blogger.com",
   "https://*.blogspot.com",
-  "https://daffadevhosting.github.io"
-  // "null",
+  "https://daffadevhosting.github.io",
+  "null",
 ];
 
 function getConfig(env) {

@@ -361,7 +361,7 @@ function _ad(){
   var ad=_pick(pool);
   if(!ad)return;
   var img=ad.image,lnk=ad.link,ttl=ad.title||"Promo Spesial!";
-  var h='<style>.mdl-ad{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:flex;justify-content:center;align-items:center;z-index:2147483646;opacity:0;pointer-events:none;transition:opacity .3s}.mdl-ad.show{opacity:1;pointer-events:auto}.mdl-ct{background:#fff;padding:20px;border-radius:8px;max-width:450px;width:90%;position:relative;box-shadow:0 4px 15px rgba(0,0,0,.3);text-align:center}.cls-ad{position:absolute;top:10px;right:15px;font-size:24px;font-weight:bold;color:#333;cursor:pointer;border:none;background:none}.cls-ad:hover{color:#f00}.ad-img{width:100%;height:auto;border-radius:4px;margin-top:15px;display:block}.ad-btn{display:inline-block;margin-top:15px;padding:10px 20px;background:#111;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold}.ad-btn:hover{background:#333}</style><div class="mdl-ad" id="adM"><div class="mdl-ct"><button class="cls-ad" id="clsAd">&times;</button><h3>'+ttl+'</h3><a href="'+lnk+'" target="_blank" rel="noopener sponsored"><img src="'+img+'" alt="Ad" class="ad-img"></a><a href="'+lnk+'" target="_blank" rel="noopener sponsored" class="ad-btn">Cek Sekarang!</a></div></div>';
+  var h='<style>.mdl-ad{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:flex;justify-content:center;align-items:center;z-index:2147483646;opacity:0;pointer-events:none;transition:opacity .3s}.mdl-ad.show{opacity:1;pointer-events:auto}.mdl-ad.hide{display:none;visibility:hidden;}.mdl-ct{background:#fff;padding:20px;border-radius:8px;max-width:450px;width:90%;position:relative;box-shadow:0 4px 15px rgba(0,0,0,.3);text-align:center}.cls-ad{position:absolute;top:10px;right:15px;font-size:24px;font-weight:bold;color:#333;cursor:pointer;border:none;background:none}.cls-ad:hover{color:#f00}.ad-img{width:100%;height:auto;border-radius:4px;margin-top:15px;display:block}.ad-btn{display:inline-block;margin-top:15px;padding:10px 20px;background:#111;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold}.ad-btn:hover{background:#333}</style><div class="mdl-ad" id="adM"><div class="mdl-ct"><button class="cls-ad" id="clsAd">&times;</button><h3>'+ttl+'</h3><a href="'+lnk+'" target="_blank" rel="noopener sponsored"><img src="'+img+'" alt="Ad" class="ad-img"></a><a href="'+lnk+'" target="_blank" rel="noopener sponsored" class="ad-btn">Cek Sekarang!</a></div></div>';
   d.body.insertAdjacentHTML("beforeend",h);
   var m=_id("adM"),c=_id("clsAd");
   setTimeout(function(){m&&m.classList.add("show")},2000);
@@ -384,7 +384,7 @@ function _bannerRotate(pool){
   d.body.appendChild(wrap);
 
   var closed=false;
-  _on(_id("vbClose"),"click",function(){closed=true;wrap.classList.remove("show");});
+  _on(_id("vbClose"),"click",function(){closed=true;wrap.classList.remove("show");wrap.classList.add("hide");});
 
   var idx=_rnd(0,pool.length-1);
   function showNext(){

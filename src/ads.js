@@ -365,8 +365,8 @@ function _ad(){
   d.body.insertAdjacentHTML("beforeend",h);
   var m=_id("adM"),c=_id("clsAd");
   setTimeout(function(){m&&m.classList.add("show")},2000);
-  _on(c,"click",function(){m&&m.classList.remove("show")});
-  _on(m,"click",function(e){if(e.target===m)m.classList.remove("show")});
+  _on(c,"click",function(){m&&m.classList.remove("show");m.classList.add("hide")}});
+  _on(m,"click",function(e){if(e.target===m)m.classList.remove("show");m.classList.add("hide")});
   _bannerRotate(pool);
 }
 
@@ -374,7 +374,7 @@ function _ad(){
 function _bannerRotate(pool){
   if(!pool||pool.length<1)return;
   var style=d.createElement("style");
-  style.textContent=".vbnr{position:fixed;bottom:16px;right:16px;z-index:2147483640;width:300px;max-width:calc(100vw - 32px);background:#111;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.45);font-family:sans-serif;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s}.vbnr.show{opacity:1;transform:translateY(0)}.vbnr a{display:block;text-decoration:none;color:inherit}.vbnr img{width:100%;height:auto;display:block;max-height:160px;object-fit:cover}.vbnr .vb-bd{padding:10px 12px}.vbnr .vb-t{font-size:13px;font-weight:600;color:#fff;margin:0 0 4px}.vbnr .vb-c{position:absolute;top:6px;right:8px;width:24px;height:24px;border:none;background:rgba(0,0,0,.55);color:#fff;border-radius:50%;cursor:pointer;font-size:14px;line-height:1}.vbnr .vb-c:hover{background:#c00}";
+  style.textContent=".vbnr{position:fixed;bottom:16px;right:16px;z-index:2147483640;width:300px;max-width:calc(100vw - 32px);background:#111;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.45);font-family:sans-serif;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s}.vbnr.show{opacity:1;transform:translateY(0)}.vbnr.hide{display:none;visibility:hidden;}.vbnr a{display:block;text-decoration:none;color:inherit}.vbnr img{width:100%;height:auto;display:block;max-height:160px;object-fit:cover}.vbnr .vb-bd{padding:10px 12px}.vbnr .vb-t{font-size:13px;font-weight:600;color:#fff;margin:0 0 4px}.vbnr .vb-c{position:absolute;top:6px;right:8px;width:24px;height:24px;border:none;background:rgba(0,0,0,.55);color:#fff;border-radius:50%;cursor:pointer;font-size:14px;line-height:1}.vbnr .vb-c:hover{background:#c00}";
   d.head.appendChild(style);
 
   var wrap=d.createElement("div");

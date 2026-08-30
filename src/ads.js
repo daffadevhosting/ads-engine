@@ -365,8 +365,8 @@ function _ad(){
   d.body.insertAdjacentHTML("beforeend",h);
   var m=_id("adM"),c=_id("clsAd");
   setTimeout(function(){m&&m.classList.add("show")},2000);
-  _on(c,"click",function(){m&&m.classList.remove("show");m.classList.add("hide")}});
-  _on(m,"click",function(e){if(e.target===m)m.classList.remove("show");m.classList.add("hide")});
+  _on(c,"click",function(){m&&m.classList.remove("show");m.classList.add("hide");});
+  _on(m,"click",function(e){if(e.target===m)m.classList.remove("show");m.classList.add("hide");});
   _bannerRotate(pool);
 }
 
